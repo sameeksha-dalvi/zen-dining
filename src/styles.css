@@ -1,3 +1,18 @@
+:root {
+  
+  --bg-main: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --text-primary: #1F1F1F;
+  --text-secondary: #555555;
+  --accent-primary: #B23A48;
+  --accent-secondary: #D6C6B8;
+  --btn-bg: #2E2E2E;
+  --btn-text: #FFFFFF;
+  --border-light: #E6E1DB;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
 body {
-  background-color: brown;
+  background-color: var(--bg-main);
 }
