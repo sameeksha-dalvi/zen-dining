@@ -1,4 +1,5 @@
 import "./styles.css";
-import "./home.js"
+import loadHome from "./home.js"
 
+loadHome();
 console.log("Hi Sameeksha!!");
