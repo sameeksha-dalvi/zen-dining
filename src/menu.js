@@ -1,9 +1,36 @@
+const menu = [
+    {
+        category: "Starters",
+        items: [
+            { name: "Miso Soup", desc: "Light soybean broth with tofu", price: "¥300" },
+            { name: "Edamame", desc: "Steamed soybeans with sea salt", price: "¥420" },
+            { name: "Vegetable Gyoza", desc: "Pan-fried dumplings with seasonal vegetables", price: "¥580" }
 
+        ]
+    },
+    {
+        category: "Main Course",
+        items: [
+            { name: "Vegetable Ramen", desc: "Slow-cooked broth with noodles and fresh vegetables", price: "¥1,200" },
+            { name: "Tofu Teriyaki Bowl", desc: "Grilled tofu, rice, and teriyaki glaze", price: "¥1,350" },
+            { name: "Vegetable Sushi Platter", desc: "Assorted vegetable sushi rolls", price: "¥1,500" }
+
+        ]
+    },
+    {
+        category: "Desserts",
+        items: [
+            { name: "Matcha Ice Cream", desc: "Classic green tea flavored ice cream", price: "¥450" },
+            { name: "Mochi", desc: "Soft rice cake filled with sweet bean paste", price: "¥380" }
+
+        ]
+    },
+];
 
 function loadMenu() {
     const contentDiv = document.querySelector('#content');
     contentDiv.textContent = '';
-    
+
     const card = document.createElement('div');
     card.className = 'menu-card';
 
@@ -11,13 +38,49 @@ function loadMenu() {
     titleDiv.className = 'headingText';
     titleDiv.textContent = 'Our Menu';
 
-    const startersDiv = document.createElement('div');
-
-
     card.appendChild(titleDiv);
+    const categoryDiv = document.createElement('div');
+
+    for (let i = 0; i < menu.length; i++) {
+
+
+        const categoryName = document.createElement('div');
+
+        categoryName.textContent = menu[i].category;
+
+        categoryDiv.appendChild(categoryName);
+
+        for (let j = 0; j < menu[i].items.length; j < j++) {
+
+            const itemName = document.createElement('div');
+            itemName.textContent = menu[i].items[j].name;
+            categoryDiv.appendChild(itemName);
+
+            const itemDesc = document.createElement('div');
+            itemDesc.textContent = menu[i].items[j].desc;
+            categoryDiv.appendChild(itemDesc);
+
+            const itemPrice = document.createElement('div');
+            itemPrice.textContent = menu[i].items[j].price;
+            categoryDiv.appendChild(itemPrice);
+        }
+
+        card.appendChild(categoryDiv);
+    }
+
+
+
+    console.log(menu.length);
+    console.log(menu[0].category);
+    console.log(menu[0].items.length);
+
+
+
+
     contentDiv.appendChild(card);
 
 
 }
+
 
 export default loadMenu;
