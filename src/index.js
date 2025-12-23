@@ -1,5 +1,6 @@
 import "./styles.css";
-import loadHome from "./home.js"
+import loadHome from "./home.js";
+import loadMenu from "./menu.js";
 loadHome();
 
 
@@ -13,7 +14,7 @@ navBtnClick.addEventListener('click',function(event){
     }
 
     if(event.target.closest('#menu')){
-        alert("menu clicked");
+        loadMenu();
     }
 
     if(event.target.closest('#contact')){
