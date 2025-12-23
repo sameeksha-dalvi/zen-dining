@@ -43,11 +43,8 @@ function loadMenu() {
 
     for (let i = 0; i < menu.length; i++) {
 
-
         const categoryName = document.createElement('div');
-
         categoryName.textContent = menu[i].category;
-
         categoryDiv.appendChild(categoryName);
 
         for (let j = 0; j < menu[i].items.length; j < j++) {
