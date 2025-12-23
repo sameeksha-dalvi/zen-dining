@@ -59,21 +59,11 @@ button:hover {
   color: var(--btn-text);
 }
 
-
-/* #content {
-  background-color: var(--bg-card);
-  width: 1000px;
-  margin: 0 auto;
-  height: 100vh;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-} */
+.btn-active {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--btn-text);
+}
 
 #content {
   max-width: 1200px;
@@ -101,13 +91,14 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.home-card,.menu-card {
+.home-card,
+.menu-card {
   background-color: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
   padding: 2.5rem 3rem;
-  max-width: 800px;
+  width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -154,4 +145,43 @@ footer a:hover {
   gap: 20px;
   align-items: center;
   margin-bottom: 80px;
+}
+
+.menu-category {
+  text-align: left;
+}
+
+.category-name {
+  color: var(--accent-secondary);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.item-main {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.item-name {
+  color: var(--btn-text);
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.item-desc {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.item-price {
+  color: var(--accent-secondary);
 }

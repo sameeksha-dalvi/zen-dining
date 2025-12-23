@@ -40,26 +40,39 @@ function loadMenu() {
 
     card.appendChild(titleDiv);
     const categoryDiv = document.createElement('div');
+    categoryDiv.className = 'menu-category';
 
     for (let i = 0; i < menu.length; i++) {
 
         const categoryName = document.createElement('div');
+        categoryName.className = 'category-name';
         categoryName.textContent = menu[i].category;
         categoryDiv.appendChild(categoryName);
 
         for (let j = 0; j < menu[i].items.length; j < j++) {
 
+            const itemMainDiv = document.createElement('div');
+
+            itemMainDiv.className = 'item-main';
+
             const itemName = document.createElement('div');
+            itemName.className = 'item-name';
             itemName.textContent = menu[i].items[j].name;
-            categoryDiv.appendChild(itemName);
+            itemMainDiv.appendChild(itemName);
+
+            const itemPrice = document.createElement('div');
+            itemPrice.className = 'item-price';
+            itemPrice.textContent = menu[i].items[j].price;
+            itemMainDiv.appendChild(itemPrice);
+
+            categoryDiv.appendChild(itemMainDiv);
 
             const itemDesc = document.createElement('div');
+            itemDesc.className = 'item-desc';
             itemDesc.textContent = menu[i].items[j].desc;
             categoryDiv.appendChild(itemDesc);
 
-            const itemPrice = document.createElement('div');
-            itemPrice.textContent = menu[i].items[j].price;
-            categoryDiv.appendChild(itemPrice);
+
         }
 
         card.appendChild(categoryDiv);
