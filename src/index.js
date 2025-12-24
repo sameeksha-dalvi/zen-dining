@@ -1,6 +1,7 @@
 import "./styles.css";
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 loadHome();
 
 
@@ -25,6 +26,6 @@ navBtnClick.addEventListener('click',function(event){
 
     if(event.target.closest('#contact')){
         event.target.classList.add('btn-active');
-        alert("contact clicked");
+        loadContact();
     }
 });

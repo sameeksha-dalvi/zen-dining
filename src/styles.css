@@ -92,7 +92,8 @@ footer a:hover {
 }
 
 .home-card,
-.menu-card {
+.menu-card,
+.contact-card {
   background-color: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
@@ -184,4 +185,31 @@ footer a:hover {
 
 .item-price {
   color: var(--accent-secondary);
+}
+
+.contact-label {
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-secondary);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 18px;
+  color: var(--btn-text);
+}
+
+.contact-row{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.intro-line {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--btn-text);
+  font-style: italic;
+  margin-bottom: 50px;
 }
