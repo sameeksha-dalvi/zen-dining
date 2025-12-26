@@ -79,14 +79,6 @@ function loadMenu() {
     }
 
 
-
-    console.log(menu.length);
-    console.log(menu[0].category);
-    console.log(menu[0].items.length);
-
-
-
-
     contentDiv.appendChild(card);
 
 
